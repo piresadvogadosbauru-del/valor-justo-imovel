@@ -9,8 +9,8 @@ export function Header() {
             <Scale className="h-5 w-5" />
           </div>
           <div className="leading-tight">
-            <p className="font-serif text-base font-semibold text-navy">Revisão de ITBI</p>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">São Paulo · SP</p>
+            <p className="font-serif text-base font-semibold text-navy">Pires Advogados</p>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Revisão de ITBI · São Paulo</p>
           </div>
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">

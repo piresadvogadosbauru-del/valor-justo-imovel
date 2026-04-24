@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20sobre%20ITBI%20pago%20a%20maior";
+const WHATSAPP_URL = "https://wa.me/5514998040911?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20sobre%20ITBI%20pago%20a%20maior%20em%20S%C3%A3o%20Paulo";
 
 export function WhatsappFab() {
   return (
