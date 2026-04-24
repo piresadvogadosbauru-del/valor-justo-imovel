@@ -392,9 +392,9 @@ function Escritorio() {
         </div>
         <div className="grid gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur sm:grid-cols-2">
           {[
-            { k: "Escritório", v: "[INSERIR NOME DO ESCRITÓRIO]" },
-            { k: "Advogado responsável", v: "[INSERIR NOME DO ADVOGADO]" },
-            { k: "OAB", v: "[INSERIR OAB]" },
+            { k: "Escritório", v: "Pires Advogados" },
+            { k: "Advogado responsável", v: "Thiago Alves Pires" },
+            { k: "OAB/SP", v: "406.256" },
             { k: "Atuação", v: "São Paulo/SP e atendimento online" },
           ].map((i) => (
             <div key={i.k} className="rounded-lg border border-white/10 p-4">
@@ -525,22 +525,31 @@ function Footer() {
                 <Scale className="h-5 w-5" />
               </div>
               <div>
-                <p className="font-serif text-base font-semibold">[NOME DO ESCRITÓRIO]</p>
+                <p className="font-serif text-base font-semibold">Pires Advogados</p>
                 <p className="text-[10px] uppercase tracking-[0.18em] text-gold/80">Direito Tributário</p>
               </div>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-white/65">
               Atuação especializada em revisão e restituição de ITBI no Município de São Paulo.
             </p>
-            <p className="mt-4 text-xs text-white/50">OAB: [INSERIR OAB]</p>
+            <p className="mt-4 text-xs text-white/50">Thiago Alves Pires · OAB/SP 406.256</p>
           </div>
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">Contato</p>
             <ul className="mt-4 space-y-3 text-sm text-white/75">
               <li className="flex items-center gap-2.5"><MapPin className="h-4 w-4 text-gold" /> São Paulo/SP</li>
-              <li className="flex items-center gap-2.5"><Phone className="h-4 w-4 text-gold" /> (11) 0000-0000</li>
-              <li className="flex items-center gap-2.5"><Mail className="h-4 w-4 text-gold" /> contato@escritorio.com.br</li>
-              <li className="flex items-center gap-2.5"><MessageCircle className="h-4 w-4 text-gold" /> WhatsApp atendimento</li>
+              <li className="flex items-center gap-2.5">
+                <Phone className="h-4 w-4 text-gold" />
+                <a href="tel:+5514998040911" className="hover:text-gold">(14) 99804-0911</a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Mail className="h-4 w-4 text-gold" />
+                <a href="mailto:thiagopires@adv.oabsp.org.br" className="hover:text-gold break-all">thiagopires@adv.oabsp.org.br</a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <MessageCircle className="h-4 w-4 text-gold" />
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gold">WhatsApp (14) 99804-0911</a>
+              </li>
             </ul>
           </div>
           <div>
@@ -563,7 +572,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row">
-          <p>© {new Date().getFullYear()} [NOME DO ESCRITÓRIO]. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Pires Advogados. Todos os direitos reservados.</p>
           <p>Conteúdo informativo · Conforme Provimento 205/2021 OAB</p>
         </div>
       </div>
