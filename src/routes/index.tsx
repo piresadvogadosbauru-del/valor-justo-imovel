@@ -315,7 +315,7 @@ function ComoFunciona() {
     },
     {
       n: "04",
-      title: "Honorários só no êxito",
+      title: "Honorários somente no êxito",
       desc: "Você não paga honorários iniciais — eles incidem apenas em caso de êxito no processo.",
     },
   ];
