@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      itbi_leads: {
+        Row: {
+          ano: string | null
+          created_at: string
+          email: string
+          id: string
+          nome: string
+          user_agent: string | null
+          valor_compra: string | null
+          valor_prefeitura: string | null
+          whatsapp: string
+        }
+        Insert: {
+          ano?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          nome: string
+          user_agent?: string | null
+          valor_compra?: string | null
+          valor_prefeitura?: string | null
+          whatsapp: string
+        }
+        Update: {
+          ano?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          nome?: string
+          user_agent?: string | null
+          valor_compra?: string | null
+          valor_prefeitura?: string | null
+          whatsapp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
