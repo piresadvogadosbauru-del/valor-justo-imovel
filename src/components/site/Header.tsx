@@ -1,4 +1,5 @@
-import { Scale } from "lucide-react";
+import { MessageCircle, Scale } from "lucide-react";
+import { WHATSAPP_URL } from "./WhatsappFab";
 
 export function Header() {
   return (
@@ -13,17 +14,16 @@ export function Header() {
             <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Revisão de ITBI · São Paulo</p>
           </div>
         </a>
-        <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
-          <a href="#problema" className="transition-colors hover:text-navy">O Problema</a>
-          <a href="#stj" className="transition-colors hover:text-navy">Tema 1.113/STJ</a>
-          <a href="#calculo" className="transition-colors hover:text-navy">Cálculo</a>
-          <a href="#faq" className="transition-colors hover:text-navy">FAQ</a>
-        </nav>
+        <p className="hidden text-xs uppercase tracking-[0.18em] text-muted-foreground md:block">OAB/SP 406.256</p>
         <a
-          href="#analise"
-          className="hidden h-10 items-center justify-center rounded-md bg-gold px-5 text-sm font-semibold text-gold-foreground shadow-gold-glow transition hover:brightness-105 sm:inline-flex"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-[oklch(0.62_0.18_148)] px-4 text-sm font-semibold text-white shadow-[0_8px_24px_-10px_oklch(0.62_0.18_148/0.6)] transition hover:brightness-105 sm:px-5"
         >
-          Analisar meu caso
+          <MessageCircle className="h-4 w-4" />
+          <span className="hidden sm:inline">Falar pelo WhatsApp</span>
+          <span className="sm:hidden">WhatsApp</span>
         </a>
       </div>
     </header>
