@@ -112,7 +112,7 @@ function Hero() {
               <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Análise do caso 100% gratuita
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Honorários só no êxito
+              <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Honorários somente no êxito
             </span>
             <span className="inline-flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Resposta pelo WhatsApp
@@ -123,23 +123,35 @@ function Hero() {
           <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-gold/20 to-transparent blur-2xl" />
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-1 shadow-[0_30px_80px_-20px_oklch(0_0_0/0.6)] backdrop-blur">
             <div className="flex h-full flex-col items-center justify-center rounded-xl bg-gradient-navy p-10 text-center">
-              <Clock className="h-7 w-7 text-gold" />
-              <p className="mt-4 font-serif text-7xl font-semibold text-gold">5</p>
-              <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-gold/90">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 ring-1 ring-gold/30">
+                <Clock className="h-5 w-5 text-gold" />
+              </span>
+              <p className="mt-5 font-serif text-[88px] font-semibold leading-none tracking-tight text-gold">
+                5
+              </p>
+              <p className="mt-3 font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold/90">
                 Anos para ingressar
               </p>
-              <p className="mt-5 max-w-[30ch] text-sm leading-relaxed text-white/80">
+              <p className="mt-5 max-w-[32ch] font-sans text-[15px] leading-relaxed text-white/75">
                 O prazo prescricional para buscar a restituição do ITBI pago
                 a maior é de até 5 anos a contar do pagamento.
               </p>
-              <div className="mt-7 grid w-full grid-cols-2 gap-3 border-t border-white/10 pt-5 text-left">
+              <div className="mt-8 grid w-full grid-cols-2 gap-4 border-t border-white/10 pt-6 text-left">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-gold/80">Duração média</p>
-                  <p className="mt-1 font-serif text-2xl text-white">~10 meses</p>
+                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-gold/80">
+                    Duração média
+                  </p>
+                  <p className="mt-1.5 font-sans text-xl font-semibold tracking-tight text-white">
+                    ~10 meses
+                  </p>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-gold/80">Honorários</p>
-                  <p className="mt-1 font-serif text-2xl text-white">Só no êxito</p>
+                  <p className="font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-gold/80">
+                    Honorários
+                  </p>
+                  <p className="mt-1.5 font-sans text-xl font-semibold tracking-tight text-white">
+                    Somente no êxito
+                  </p>
                 </div>
               </div>
             </div>
@@ -303,7 +315,7 @@ function ComoFunciona() {
     },
     {
       n: "04",
-      title: "Honorários só no êxito",
+      title: "Honorários somente no êxito",
       desc: "Você não paga honorários iniciais — eles incidem apenas em caso de êxito no processo.",
     },
   ];
