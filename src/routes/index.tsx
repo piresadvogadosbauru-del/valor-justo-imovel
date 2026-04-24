@@ -422,6 +422,80 @@ function Escritorio() {
   );
 }
 
+/* ---------- ÁREA DO CLIENTE ---------- */
+function AreaCliente() {
+  const cards = [
+    {
+      icon: FileSearch,
+      eyebrow: "Clientes do escritório",
+      title: "Acompanhe seu processo online",
+      desc: "Consulte o andamento processual diretamente no e-SAJ do Tribunal de Justiça de São Paulo, com seu número de processo ou CPF.",
+      cta: "Consultar no e-SAJ TJSP",
+      href: "https://esaj.tjsp.jus.br/cpopg/open.do?servico=190101",
+    },
+    {
+      icon: UserCheck,
+      eyebrow: "Transparência e confiança",
+      title: "Verifique a inscrição na OAB/SP",
+      desc: "Confirme a regularidade da inscrição do Dr. Thiago Alves Pires no site oficial da Ordem dos Advogados do Brasil — Seção São Paulo.",
+      cta: "Consultar OAB nº 406.256",
+      href: "https://www2.oabsp.org.br/asp/consultainscritos/consulta01.asp",
+    },
+  ];
+  return (
+    <section className="border-b border-border bg-background py-20 sm:py-24">
+      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+            Área do cliente
+          </p>
+          <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
+            Consultas oficiais e acompanhamento processual
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+            Acesso direto aos canais oficiais do Tribunal de Justiça de São
+            Paulo e da OAB/SP, com total transparência.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {cards.map(({ icon: Icon, eyebrow, title, desc, cta, href }) => (
+            <a
+              key={title}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card p-7 shadow-elegant transition hover:-translate-y-0.5 hover:shadow-gold-glow"
+            >
+              <div className="absolute right-0 top-0 h-20 w-20 bg-radial-gold opacity-60" />
+              <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-navy/5 ring-1 ring-navy/10">
+                <Icon className="h-6 w-6 text-gold" />
+              </div>
+              <p className="relative mt-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-gold">
+                {eyebrow}
+              </p>
+              <h3 className="relative mt-2 font-serif text-xl font-semibold text-navy">
+                {title}
+              </h3>
+              <p className="relative mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                {desc}
+              </p>
+              <div className="relative mt-6 inline-flex items-center gap-2 text-sm font-semibold text-navy transition group-hover:text-gold">
+                {cta}
+                <ExternalLink className="h-4 w-4" />
+              </div>
+            </a>
+          ))}
+        </div>
+        <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
+          Os links acima direcionam aos sites oficiais do TJSP e da OAB/SP. Em
+          caso de dúvida sobre o seu processo, fale diretamente com o
+          escritório pelo WhatsApp.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- FAQ ---------- */
 function FAQ() {
   const faqs = [
