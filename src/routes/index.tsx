@@ -1,8 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
+  Award,
+  BadgeCheck,
+  CalendarClock,
   CheckCircle2,
   ChevronDown,
   Clock,
+  HandCoins,
+  ShieldCheck,
+  Sparkles,
   MessageCircle,
   Scale,
 } from "lucide-react";
@@ -65,8 +71,10 @@ function Index() {
     <div id="top" className="min-h-screen bg-background text-foreground">
       <Header />
       <Hero />
+      <Beneficios />
       <Problema />
       <Juridica />
+      <ComoFunciona />
       <Prazo />
       <Escritorio />
       <FAQ />
@@ -80,39 +88,101 @@ function Index() {
 /* ---------- HERO ---------- */
 function Hero() {
   return (
-    <section className="border-b border-border bg-background">
-      <div className="mx-auto grid max-w-5xl gap-12 px-6 py-16 sm:py-20 md:grid-cols-2 md:items-center md:gap-16 md:py-24 lg:px-8">
+    <section className="relative overflow-hidden bg-gradient-hero text-navy-foreground">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(oklch(1_0_0/0.3)_1px,transparent_1px),linear-gradient(90deg,oklch(1_0_0/0.3)_1px,transparent_1px)] [background-size:48px_48px]" />
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 sm:py-24 md:grid-cols-[1.15fr_1fr] md:items-center md:gap-16 md:py-28 lg:px-8">
         <div className="space-y-7">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold-soft bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5" />
             Tema 1.113 — STJ
-          </p>
-          <h1 className="text-balance font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl">
-            Recupere o excesso pago no ITBI sobre seu imóvel em São Paulo.
+          </span>
+          <h1 className="text-balance font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            Recupere o excesso pago no <span className="text-gradient-gold">ITBI</span> sobre seu imóvel em São Paulo.
           </h1>
-          <p className="max-w-[48ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="max-w-[52ch] text-base leading-relaxed text-white/75 sm:text-lg">
             A base de cálculo do ITBI não pode ser vinculada ao valor venal
             de referência da Prefeitura. O STJ já decidiu: você pode ter
             direito à restituição do que foi pago a maior.
           </p>
-          <div className="pt-2">
-            <WhatsAppCTA />
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <WhatsAppCTA size="lg" />
           </div>
-          <p className="text-xs text-muted-foreground">
-            Análise inicial sem custo · Resposta direta pelo WhatsApp
-          </p>
-        </div>
-        <div className="bg-secondary/40 p-3">
-          <div className="flex h-full flex-col items-center justify-center bg-gradient-navy p-10 text-center text-navy-foreground">
-            <p className="font-serif text-7xl text-gold">5</p>
-            <p className="mt-3 text-[10px] uppercase tracking-[0.22em] text-gold/90">
-              Anos para ingressar
-            </p>
-            <p className="mt-5 max-w-[28ch] text-sm leading-relaxed text-white/80">
-              O prazo prescricional para buscar a restituição do ITBI pago
-              a maior é de até 5 anos a contar do pagamento.
-            </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-3 text-xs text-white/70">
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Análise do caso 100% gratuita
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Honorários só no êxito
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <CheckCircle2 className="h-3.5 w-3.5 text-gold" /> Resposta pelo WhatsApp
+            </span>
           </div>
         </div>
+        <div className="relative">
+          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-gold/20 to-transparent blur-2xl" />
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-1 shadow-[0_30px_80px_-20px_oklch(0_0_0/0.6)] backdrop-blur">
+            <div className="flex h-full flex-col items-center justify-center rounded-xl bg-gradient-navy p-10 text-center">
+              <Clock className="h-7 w-7 text-gold" />
+              <p className="mt-4 font-serif text-7xl font-semibold text-gold">5</p>
+              <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-gold/90">
+                Anos para ingressar
+              </p>
+              <p className="mt-5 max-w-[30ch] text-sm leading-relaxed text-white/80">
+                O prazo prescricional para buscar a restituição do ITBI pago
+                a maior é de até 5 anos a contar do pagamento.
+              </p>
+              <div className="mt-7 grid w-full grid-cols-2 gap-3 border-t border-white/10 pt-5 text-left">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-gold/80">Duração média</p>
+                  <p className="mt-1 font-serif text-2xl text-white">~10 meses</p>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-gold/80">Honorários</p>
+                  <p className="mt-1 font-serif text-2xl text-white">Só no êxito</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- BENEFÍCIOS ---------- */
+function Beneficios() {
+  const items = [
+    {
+      icon: BadgeCheck,
+      title: "Análise gratuita",
+      desc: "A avaliação inicial do seu caso é feita sem qualquer custo ou compromisso.",
+    },
+    {
+      icon: CalendarClock,
+      title: "Cerca de 10 meses",
+      desc: "Tempo médio estimado de tramitação do processo judicial até a sentença.",
+    },
+    {
+      icon: HandCoins,
+      title: "Honorários de êxito",
+      desc: "Você só paga honorários se o processo for ganho — sem risco financeiro inicial.",
+    },
+  ];
+  return (
+    <section className="relative -mt-10 px-6 lg:px-8">
+      <div className="mx-auto grid max-w-5xl gap-4 rounded-2xl border border-border bg-card p-6 shadow-elegant sm:grid-cols-3 sm:p-8">
+        {items.map(({ icon: Icon, title, desc }) => (
+          <div key={title} className="flex gap-4 sm:flex-col sm:gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy/5 text-navy ring-1 ring-navy/10">
+              <Icon className="h-5 w-5 text-gold" />
+            </div>
+            <div>
+              <p className="font-serif text-base font-semibold text-navy">{title}</p>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -136,17 +206,32 @@ function Problema() {
   ];
   return (
     <section className="border-b border-border bg-background py-20 sm:py-24">
-      <div className="mx-auto grid max-w-5xl gap-10 px-6 md:grid-cols-3 lg:px-8">
-        {items.map((it) => (
-          <div key={it.title} className="border-t border-navy pt-6">
-            <h3 className="font-serif text-lg font-semibold text-navy">
-              {it.title}
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {it.desc}
-            </p>
-          </div>
-        ))}
+      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">Entenda</p>
+          <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
+            Por que tantos contribuintes pagaram a mais
+          </h2>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {items.map((it) => (
+            <div
+              key={it.title}
+              className="group relative overflow-hidden rounded-xl border border-border bg-card p-7 shadow-elegant transition hover:-translate-y-0.5 hover:shadow-gold-glow"
+            >
+              <div className="absolute right-0 top-0 h-16 w-16 bg-radial-gold opacity-60" />
+              <div className="relative">
+                <div className="h-px w-10 bg-gold" />
+                <h3 className="mt-5 font-serif text-lg font-semibold text-navy">
+                  {it.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {it.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -161,7 +246,7 @@ function Juridica() {
     "O contribuinte pode pedir a restituição do valor pago indevidamente",
   ];
   return (
-    <section className="border-b border-border bg-secondary/40 py-20 sm:py-24">
+    <section className="border-b border-border bg-gradient-soft py-20 sm:py-24">
       <div className="mx-auto grid max-w-5xl gap-12 px-6 md:grid-cols-2 md:gap-16 lg:px-8">
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
@@ -177,12 +262,16 @@ function Juridica() {
             mediante procedimento administrativo próprio, com contraditório
             e fundamentação técnica.
           </p>
+          <div className="mt-7 flex items-center gap-3 rounded-lg border border-gold-soft bg-gold/10 px-4 py-3 text-sm text-navy">
+            <ShieldCheck className="h-5 w-5 shrink-0 text-gold" />
+            <span>Tese vinculante consolidada pelo Superior Tribunal de Justiça.</span>
+          </div>
         </div>
-        <ul className="space-y-3">
+        <ul className="space-y-3 rounded-2xl border border-border bg-card p-6 shadow-elegant">
           {points.map((p) => (
             <li
               key={p}
-              className="flex items-start gap-3 border-t border-navy/20 pt-4 text-sm leading-relaxed text-navy sm:text-base"
+              className="flex items-start gap-3 border-b border-border pb-4 text-sm leading-relaxed text-navy last:border-b-0 last:pb-0 sm:text-base"
             >
               <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
               <span>{p}</span>
@@ -194,12 +283,73 @@ function Juridica() {
   );
 }
 
+/* ---------- COMO FUNCIONA ---------- */
+function ComoFunciona() {
+  const steps = [
+    {
+      n: "01",
+      title: "Conversa pelo WhatsApp",
+      desc: "Você envia uma mensagem e recebe uma análise inicial do seu caso, totalmente gratuita.",
+    },
+    {
+      n: "02",
+      title: "Análise documental",
+      desc: "Avaliamos a guia de ITBI, escritura e valor real da transação para apurar a viabilidade.",
+    },
+    {
+      n: "03",
+      title: "Ação judicial",
+      desc: "Ingressamos com a ação de repetição de indébito. Tramitação média de cerca de 10 meses.",
+    },
+    {
+      n: "04",
+      title: "Honorários só no êxito",
+      desc: "Você não paga honorários iniciais — eles incidem apenas em caso de êxito no processo.",
+    },
+  ];
+  return (
+    <section className="border-b border-border bg-background py-20 sm:py-24">
+      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">Como funciona</p>
+          <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
+            Um processo simples, transparente e sem risco financeiro
+          </h2>
+        </div>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((s) => (
+            <div
+              key={s.n}
+              className="relative rounded-xl border border-border bg-card p-6 shadow-elegant"
+            >
+              <p className="font-serif text-3xl text-gold/80">{s.n}</p>
+              <h3 className="mt-3 font-serif text-base font-semibold text-navy">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {s.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mx-auto mt-10 max-w-2xl rounded-lg border border-border bg-secondary/50 px-5 py-4 text-center text-xs leading-relaxed text-muted-foreground">
+          O tempo de tramitação é uma estimativa baseada na média de processos
+          similares e pode variar conforme o caso concreto e o trâmite judicial.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- PRAZO ---------- */
 function Prazo() {
   return (
-    <section className="border-b border-border bg-background py-20 sm:py-24">
-      <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-        <Clock className="mx-auto h-8 w-8 text-gold" />
+    <section className="relative overflow-hidden border-b border-border bg-gradient-soft py-20 sm:py-24">
+      <div className="pointer-events-none absolute inset-0 bg-radial-gold opacity-50" />
+      <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-navy text-gold shadow-elegant">
+          <Clock className="h-7 w-7" />
+        </div>
         <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
           Atenção ao prazo
         </p>
@@ -223,12 +373,16 @@ function Prazo() {
 /* ---------- ESCRITÓRIO ---------- */
 function Escritorio() {
   return (
-    <section className="bg-gradient-navy py-20 text-navy-foreground sm:py-24">
-      <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
+    <section className="relative overflow-hidden bg-gradient-navy py-20 text-navy-foreground sm:py-24">
+      <div className="pointer-events-none absolute inset-0 bg-radial-gold opacity-30" />
+      <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/5 ring-1 ring-gold/30">
+          <Award className="h-7 w-7 text-gold" />
+        </div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
           Quem atende
         </p>
-        <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+        <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
           Análise técnica especializada
         </h2>
         <p className="mx-auto mt-5 max-w-[55ch] leading-relaxed text-white/75">
