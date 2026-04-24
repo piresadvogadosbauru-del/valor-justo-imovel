@@ -11,6 +11,9 @@ import {
   Sparkles,
   MessageCircle,
   Scale,
+  ExternalLink,
+  FileSearch,
+  UserCheck,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { WhatsappFab, WHATSAPP_URL } from "@/components/site/WhatsappFab";
@@ -77,6 +80,7 @@ function Index() {
       <ComoFunciona />
       <Prazo />
       <Escritorio />
+      <AreaCliente />
       <FAQ />
       <CTAFinal />
       <Footer />
