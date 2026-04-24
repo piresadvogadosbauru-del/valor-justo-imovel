@@ -422,22 +422,22 @@ function Escritorio() {
   );
 }
 
-/* ---------- ÁREA DO CLIENTE ---------- */
+/* ---------- TRANSPARÊNCIA ---------- */
 function AreaCliente() {
   const cards = [
     {
       icon: FileSearch,
-      eyebrow: "Clientes do escritório",
-      title: "Acompanhe seu processo online",
-      desc: "Consulte o andamento processual diretamente no e-SAJ do Tribunal de Justiça de São Paulo, com seu número de processo ou CPF.",
+      eyebrow: "Acompanhamento processual",
+      title: "Consulte o andamento de qualquer processo",
+      desc: "Acesse o e-SAJ do Tribunal de Justiça de São Paulo e consulte processos em curso pelo número, nome das partes ou CPF — total transparência sobre os casos conduzidos pelo escritório.",
       cta: "Consultar no e-SAJ TJSP",
       href: "https://esaj.tjsp.jus.br/cpopg/open.do?servico=190101",
     },
     {
       icon: UserCheck,
-      eyebrow: "Transparência e confiança",
+      eyebrow: "Registro profissional",
       title: "Verifique a inscrição na OAB/SP",
-      desc: "Confirme a regularidade da inscrição do Dr. Thiago Alves Pires no site oficial da Ordem dos Advogados do Brasil — Seção São Paulo.",
+      desc: "Confirme a regularidade da inscrição do Dr. Thiago Alves Pires diretamente no site oficial da Ordem dos Advogados do Brasil — Seção São Paulo, sob o nº 406.256.",
       cta: "Consultar OAB nº 406.256",
       href: "https://www2.oabsp.org.br/asp/consultainscritos/consulta01.asp",
     },
@@ -447,14 +447,15 @@ function AreaCliente() {
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
-            Área do cliente
+            Transparência
           </p>
           <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
-            Consultas oficiais e acompanhamento processual
+            Verifique nossas credenciais e processos em canais oficiais
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Acesso direto aos canais oficiais do Tribunal de Justiça de São
-            Paulo e da OAB/SP, com total transparência.
+            Antes de contratar — ou para acompanhar um caso em andamento —
+            confira diretamente nos sites oficiais do TJSP e da OAB/SP. Nada
+            fica oculto: registro profissional e processos são públicos.
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -487,9 +488,8 @@ function AreaCliente() {
           ))}
         </div>
         <p className="mx-auto mt-10 max-w-2xl text-center text-xs leading-relaxed text-muted-foreground">
-          Os links acima direcionam aos sites oficiais do TJSP e da OAB/SP. Em
-          caso de dúvida sobre o seu processo, fale diretamente com o
-          escritório pelo WhatsApp.
+          Links direcionam aos portais oficiais do Tribunal de Justiça de São
+          Paulo e da Ordem dos Advogados do Brasil — Seção São Paulo.
         </p>
       </div>
     </section>
