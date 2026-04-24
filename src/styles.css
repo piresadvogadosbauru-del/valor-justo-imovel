@@ -167,6 +167,18 @@
   .bg-gradient-navy {
     background-image: linear-gradient(135deg, oklch(0.20 0.05 256) 0%, oklch(0.28 0.07 258) 60%, oklch(0.22 0.06 252) 100%);
   }
+  .bg-gradient-hero {
+    background-image:
+      radial-gradient(ellipse at 80% 0%, color-mix(in oklab, var(--gold) 22%, transparent) 0%, transparent 55%),
+      radial-gradient(ellipse at 0% 100%, color-mix(in oklab, var(--navy) 70%, transparent) 0%, transparent 60%),
+      linear-gradient(160deg, oklch(0.18 0.05 256) 0%, oklch(0.24 0.07 258) 55%, oklch(0.16 0.05 252) 100%);
+  }
+  .bg-gradient-soft {
+    background-image: linear-gradient(180deg, oklch(0.99 0.005 250) 0%, oklch(0.96 0.012 250) 100%);
+  }
+  .border-gold-soft {
+    border-color: color-mix(in oklab, var(--gold) 35%, transparent);
+  }
   .bg-radial-gold {
     background-image: radial-gradient(circle at 30% 20%, color-mix(in oklab, var(--gold) 18%, transparent), transparent 60%);
   }
