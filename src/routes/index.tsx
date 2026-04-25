@@ -101,9 +101,9 @@ function Hero() {
             Recupere o excesso pago no <span className="text-gradient-gold">ITBI</span> sobre seu imóvel em São Paulo.
           </h1>
           <p className="max-w-[52ch] text-base leading-relaxed text-white/75 sm:text-lg">
-            A base de cálculo do ITBI não pode ser vinculada ao valor venal
-            de referência da Prefeitura. O STJ já decidiu: você tem direito
-            à restituição do que foi pago a maior.
+            A base de cálculo do ITBI deve ser o valor real da compra e
+            não o valor venal da prefeitura. O STJ já decidiu: você tem
+            direito à restituição do que foi pago a maior.
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <WhatsAppCTA size="lg" />
