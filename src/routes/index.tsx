@@ -353,81 +353,16 @@ function ComoFunciona() {
   );
 }
 
-/* ---------- PRAZO ---------- */
-function Prazo() {
-  return (
-    <section className="relative overflow-hidden border-b border-border bg-gradient-soft py-20 sm:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-radial-gold opacity-50" />
-      <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
-        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-navy text-gold shadow-elegant">
-          <Clock className="h-7 w-7" />
-        </div>
-        <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
-          Atenção ao prazo
-        </p>
-        <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
-          O prazo para pedir a restituição é curto
-        </h2>
-        <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-          O direito de pedir restituição tributária possui prazo
-          prescricional, em regra contado do pagamento. Se o seu ITBI foi
-          pago há menos de 5 anos, fale com um advogado especialista hoje
-          mesmo para verificar a viabilidade do seu caso.
-        </p>
-        <div className="mt-8">
-          <WhatsAppCTA label="Verificar o prazo do meu caso" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------- ESCRITÓRIO ---------- */
-function Escritorio() {
-  return (
-    <section className="relative overflow-hidden bg-gradient-navy py-20 text-navy-foreground sm:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-radial-gold opacity-30" />
-      <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
-        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/5 ring-1 ring-gold/30">
-          <Award className="h-7 w-7 text-gold" />
-        </div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
-          Quem atende
-        </p>
-        <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight sm:text-4xl">
-          Análise técnica especializada
-        </h2>
-        <p className="mx-auto mt-5 max-w-[55ch] leading-relaxed text-white/75">
-          Conduzido pelo Dr. Thiago Alves Pires, o escritório Pires
-          Advogados combina a precisão técnica necessária para questões
-          tributárias imobiliárias com a celeridade que o seu patrimônio
-          exige.
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 border-y border-white/10 py-6 text-sm">
-          <span className="font-serif text-base">Thiago Alves Pires</span>
-          <span className="text-white/40">·</span>
-          <span className="text-gold">OAB/SP 406.256</span>
-          <span className="text-white/40">·</span>
-          <span className="text-white/75">São Paulo/SP</span>
-        </div>
-        <div className="mt-10">
-          <WhatsAppCTA label="Consultar meu caso agora" size="lg" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- TRANSPARÊNCIA ---------- */
 function AreaCliente() {
   const cards = [
     {
       icon: FileSearch,
-      eyebrow: "Acompanhamento processual",
-      title: "Consulte o andamento de qualquer processo",
-      desc: "Acesse o e-SAJ do Tribunal de Justiça de São Paulo e consulte processos em curso pelo número, nome das partes ou CPF — total transparência sobre os casos conduzidos pelo escritório.",
-      cta: "Consultar no e-SAJ TJSP",
-      href: "https://esaj.tjsp.jus.br/cpopg/open.do?servico=190101",
+      eyebrow: "Mais de 50 processos ativos na capital",
+      title: "Veja nossos processos de ITBI no TJSP",
+      desc: "Acesse a consulta pública do Tribunal de Justiça de São Paulo e visualize, neste exato momento, todos os processos de restituição de ITBI conduzidos pelo escritório na capital — vinculados diretamente à OAB nº 406.256.",
+      cta: "Ver processos no e-SAJ TJSP",
+      href: "https://esaj.tjsp.jus.br/cpopg/search.do?conversationId=&cbPesquisa=NUMOAB&dadosConsulta.valorConsulta=406256&cdForo=53",
     },
     {
       icon: UserCheck,
@@ -443,15 +378,16 @@ function AreaCliente() {
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
-            Transparência
+            Antes de contratar
           </p>
           <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
-            Verifique nossas credenciais e processos em canais oficiais
+            Confira nossa atuação real em canais oficiais
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Antes de contratar — ou para acompanhar um caso em andamento —
-            confira diretamente nos sites oficiais do TJSP e da OAB/SP. Nada
-            fica oculto: registro profissional e processos são públicos.
+            Não acredite só na nossa palavra. Atualmente conduzimos mais de
+            50 processos ativos de restituição de ITBI na capital paulista —
+            todos públicos no TJSP. Verifique também o registro profissional
+            do advogado responsável diretamente no site da OAB/SP.
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
