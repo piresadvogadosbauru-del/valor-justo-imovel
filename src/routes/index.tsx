@@ -174,7 +174,7 @@ function Beneficios() {
     {
       icon: CalendarClock,
       title: "Cerca de 10 meses",
-      desc: "Tempo médio estimado de tramitação do processo judicial até a sentença.",
+      desc: "Tempo médio estimado de tramitação do processo judicial até a restituição do valor devido.",
     },
     {
       icon: HandCoins,
