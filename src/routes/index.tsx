@@ -78,8 +78,6 @@ function Index() {
       <Problema />
       <Juridica />
       <ComoFunciona />
-      <Prazo />
-      <Escritorio />
       <AreaCliente />
       <FAQ />
       <CTAFinal />
