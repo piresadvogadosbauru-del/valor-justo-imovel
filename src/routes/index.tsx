@@ -132,11 +132,14 @@ function Hero() {
                 5
               </p>
               <p className="mt-3 font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold/90">
-                Anos para ingressar
+                Anos · prazo prescricional
               </p>
-              <p className="mt-5 max-w-[32ch] font-sans text-[15px] leading-relaxed text-white/75">
-                O prazo prescricional para buscar a restituição do ITBI pago
-                a maior é de até 5 anos a contar do pagamento.
+              <p className="mt-5 max-w-[32ch] font-serif text-[20px] leading-snug text-white">
+                Comprou imóvel nos últimos 5 anos?
+              </p>
+              <p className="mt-3 max-w-[32ch] font-sans text-[13px] leading-relaxed text-white/70">
+                O prazo para buscar a restituição do ITBI pago a maior é de
+                até 5 anos a contar do pagamento.
               </p>
               <div className="mt-8 grid w-full grid-cols-2 gap-4 border-t border-white/10 pt-6 text-left">
                 <div>
