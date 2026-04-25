@@ -305,21 +305,16 @@ function ComoFunciona() {
   const steps = [
     {
       n: "01",
-      title: "Conversa pelo WhatsApp",
-      desc: "Você envia uma mensagem e recebe uma análise inicial do seu caso, totalmente gratuita.",
-    },
-    {
-      n: "02",
       title: "Análise documental",
       desc: "Avaliamos a guia de ITBI, escritura e valor real da transação para apurar a viabilidade.",
     },
     {
-      n: "03",
+      n: "02",
       title: "Ação judicial",
       desc: "Ingressamos com a ação de repetição de indébito. Tramitação média de cerca de 10 meses.",
     },
     {
-      n: "04",
+      n: "03",
       title: "Honorários somente no êxito",
       desc: "Você não paga honorários iniciais — eles incidem apenas em caso de êxito no processo.",
     },
@@ -333,7 +328,7 @@ function ComoFunciona() {
             Um processo simples, transparente e sem risco financeiro
           </h2>
         </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s) => (
             <div
               key={s.n}
