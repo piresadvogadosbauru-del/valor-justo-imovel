@@ -11,7 +11,7 @@ export function Header() {
           </div>
           <div className="leading-tight">
             <p className="font-serif text-base font-semibold text-navy">Pires Advogados</p>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Revisão de ITBI · São Paulo</p>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Restituição de ITBI · São Paulo</p>
           </div>
         </a>
         <p className="hidden text-xs uppercase tracking-[0.18em] text-muted-foreground md:block">OAB/SP 406.256</p>
