@@ -102,8 +102,8 @@ function Hero() {
           </h1>
           <p className="max-w-[52ch] text-base leading-relaxed text-white/75 sm:text-lg">
             A base de cálculo do ITBI não pode ser vinculada ao valor venal
-            de referência da Prefeitura. O STJ já decidiu: você pode ter
-            direito à restituição do que foi pago a maior.
+            de referência da Prefeitura. O STJ já decidiu: você tem direito
+            à restituição do que foi pago a maior.
           </p>
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <WhatsAppCTA size="lg" />
@@ -129,9 +129,6 @@ function Hero() {
               </span>
               <p className="mt-5 font-serif text-[88px] font-semibold leading-none tracking-tight text-gold">
                 5
-              </p>
-              <p className="mt-3 font-sans text-[11px] font-medium uppercase tracking-[0.28em] text-gold/90">
-                Anos · prazo prescricional
               </p>
               <p className="mt-5 max-w-[32ch] font-serif text-[20px] leading-snug text-white">
                 Comprou imóvel nos últimos 5 anos?
@@ -305,7 +302,7 @@ function ComoFunciona() {
     {
       n: "01",
       title: "Análise documental",
-      desc: "Avaliamos a guia de ITBI, escritura e valor real da transação para apurar a viabilidade.",
+      desc: "Avaliamos a guia de ITBI, escritura e valor real da transação para apurar o valor exato a recuperar.",
     },
     {
       n: "02",
@@ -376,17 +373,18 @@ function AreaCliente() {
     <section className="border-b border-border bg-background py-20 sm:py-24">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold">
-            Antes de contratar
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">
+            Transparência
           </p>
           <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
             Confira nossa atuação real em canais oficiais
           </h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Não acredite só na nossa palavra. Atualmente conduzimos mais de
-            50 processos ativos de restituição de ITBI na capital paulista —
-            todos públicos no TJSP. Verifique também o registro profissional
-            do advogado responsável diretamente no site da OAB/SP.
+            Consulte a idoneidade do nosso escritório. Atualmente conduzimos
+            mais de 50 processos ativos de restituição de ITBI na capital
+            paulista, todos públicos no TJSP. Verifique também o registro
+            profissional do advogado responsável diretamente no site da
+            OAB/SP.
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
